@@ -4,12 +4,17 @@ from rest_framework import serializers
 
 __all__ = [
     'EmailSerializer',
+    'TokenSerializer',
     'PasswordTokenSerializer',
 ]
 
 
 class EmailSerializer(serializers.Serializer):
     email = serializers.EmailField()
+
+
+class TokenSerializer(serializers.Serializer):
+    token = serializers.CharField()
 
 
 class PasswordTokenSerializer(serializers.Serializer):

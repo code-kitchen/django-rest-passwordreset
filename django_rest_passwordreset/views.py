@@ -48,7 +48,7 @@ class ResetPasswordTokenValidate(GenericAPIView):
         if reset_password_token is None:
             return Response({'status': 'notfound'}, status=status.HTTP_404_NOT_FOUND)
 
-        return Response({'status': 'OK'}, status=status.HTTP_404_NOT_FOUND)
+        return Response({'status': 'OK'})
 
 
 class ResetPasswordConfirm(GenericAPIView):

@@ -165,7 +165,7 @@ class ResetPasswordRequestToken(GenericAPIView):
                 else:
                     # no token exists, generate a new token
                     user_agent_header = getattr(settings, 'DJANGO_REST_PASSWORDRESET_HTTP_USER_AGENT', 'HTTP_USER_AGENT')
-                    ip_address_header = getattr(settings, 'DJANGO_REST_PASSWORDRESET_IP_HEADER', 'REMOTE_ADDR')
+                    ip_address_header = getattr(settings, 'DJANGO_REST_PASSWORDRESET_IP_ADDRESS_HEADER', 'REMOTE_ADDR')
 
                     token = ResetPasswordToken.objects.create(
                         user=user,
